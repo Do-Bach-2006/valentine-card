@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root
+{
+    --small-heart-height: 70px;
+    --small-heart-width: 100px;
+    --small-heart-ratio: calc(50% - 35px);
+    
+    --med-heart-height: 100px;
+    --med-heart-width: 200px;
+    --med-heart-ratio: calc(50% - 5.2%);
+    
+    --big-heart-height: 200px;
+    --big-heart-width: 400px;
+    --big-heart-ratio: calc(50% - 10.5%);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Lobster', sans-serif;
+}
+
+html , body
+{
+    
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* stryle the small heart */
+#HEART
+{
+    height: 100px;
+    width: 100px;
+    
+    position: relative;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translateY(-50%) translateX(-50%) scale(1);
+}
+
+#HEART::before ,
+#HEART::after 
+{
+    content: "";
+    width: var(--small-heart-width);
+    height: var(--small-heart-height);
+    background-color: #f70424;
+    position: absolute;
+    /* border: 2px black solid; */
+    border-radius: 90px 0px 0px 90px;
+}
+
+
+#HEART::after
+{
+    content: "";
+    /* left: 35.35px; */
+    left: 10.675px;
+    rotate: 135deg;
+}
+
+#HEART::before
+{
+    content: "";
+    right: 10.675px;
+    rotate: 45deg;
+}
+
+h1
+{
+    background-color: #f0a1a5;
+    postion: absolute;
+    text-align: center;
+    font-size: 60px;
+    color:  #9f2c35;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button
+{
+    position: absolute;
+    bottom: 20vh;
+    width: 30vh;
+    height: 10vh;
+    font-size: 30px;
+    border-radius: 20px;
+    background-color: #fec1b2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* button:hover 
+{
+    border-bottom: 10px solid palevioletred;
+    border-left: 10px solid palevioletred;
+} */
+
+#yes
+{
+    left: 40vh;
+}
+
+
+#no
+{
+    right: 40vh;
+}
+
+#no::after
+{
+    content: "nhung minh yeu ban";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    font-size: 30px;
+    border-radius: 20px;
+    background-color: #fec1b2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#no:hover
+{
+    visibility: hidden;
+}
+
+#no:hover::after
+{
+    visibility: visible;
+}
+
+
+#yes::after
+{
+    content: "nen em dong y !";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    font-size: 30px;
+    border-radius: 20px;
+    background-color: #fec1b2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#yes:hover
+{
+    visibility: hidden;
+}
+
+#yes:hover::after
+{
+    visibility: visible;
+}
+
+img
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+/*
+
+#med_HEART
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    
+}
+
+#med_HEART::before ,
+#med_HEART::after 
+{
+    content: "";
+    width: var(--med-heart-width);
+    height: var(--med-heart-height);
+    background-color: #f70424;
+    position: absolute;
+     border: 2px black solid; 
+    border-radius: 90px 0px 0px 90px;
+}
+
+
+#med_HEART::after
+{
+    content: "";
+    left: 70.71px;
+    rotate: 135deg;
+}
+
+#med_HEART::before
+{
+    content: "";
+    rotate: 45deg;
+}
+
+
+
+#big_HEART
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    
+}
+
+#big_HEART::before ,
+#big_HEART::after 
+{
+    content: "";
+    width: var(--big-heart-width);
+    height: var(--big-heart-height);
+    background-color: #f70424;
+    position: absolute;
+     border: 2px black solid; 
+    border-radius: 90px 0px 0px 90px;
+}
+
+
+#big_HEART::after
+{
+    content: "";
+    left: 142px;
+    rotate: 135deg;
+}
+
+#big_HEART::before
+{
+    content: "";
+    rotate: 45deg;
+}
+*/
